@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="/css/signup.css" />
+<link rel="stylesheet" href="/css/sidebar.css" />
+<link rel="stylesheet" href="/css/s_navbar.css" />
+<div id="navbar"><%- include("./partials/navbar") %></div>
+<%- include("./partials/header") %>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <ul id="searchList"></ul>
+  </div>
+</div>
+
+<div id="container">
+  <div id="sidebar">
+    <img
+      id="side_img"
+      src="https://celebmafia.com/wp-content/uploads/2016/04/miranda-kerr-goes-grocery-shopping-in-malibu-4-2-2016-7.jpg"
+      alt=""
+    />
+  </div>
+
+  <div id="signup">
+    <h3 id="sign_name">Let's get you register here</h3>
+    <div id="line"></div>
+    <form action="/register" method="POST" id="form_reg">
+      <h2>Full name</h2>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="enter name"
+        required
+      />
+
+      <!-- <h2>Location</h2>
+           <input id="location" type="text" placeholder = "enter location"> -->
+
+      <h2>Mobile No.</h2>
+      <input
+        id="mobile_no"
+        name="mobile"
+        type="number"
+        placeholder="enter number"
+        required
+      />
+
+      <br />
+      <h2>Email Id</h2>
+      <input
+        id="id"
+        type="text"
+        name="email"
+        placeholder="enter email id"
+        required
+      />
+
+      <br />
+      <h2>Password</h2>
+      <input
+        id="password"
+        type="text"
+        name="password"
+        placeholder="Password"
+        required
+      />
+      <br />
+
+      <!-- <h2>SIGN UP</h2> -->
+      <div id="terms">
+        <p id="grey">By clicking on continue, you agree to our</p>
+        <p id="green">Terms & Conditions, Refunds Policy and Privacy Policy</p>
+      </div>
+      <button id="submit" type="submit">Continue</button>
+    </form>
+    <a href="/login" style="color: red"> Log in with an existing account</a>
+  </div>
+</div>
+<%-include("./partials/footer") %>
+<script src="/js/search.js"></script>
+<script src="/js/navbar.js"></script>
+
+<script>
+  let sb = document.getElementById("sidebar");
+  sb.innerHTML = sidebar();
+
+  function sidebar() {
+    return `   <div id="ul1">Account Details</div>
+    <a href=""><div id="li1">My Profile</div></a>
+    <a href=""><div id="li2">My Address</div></a>
+    <a href=""><div id="ul2">Ready List</div></a>
+    <a href=""><div id="ul3">My Order</div></a>`;
+  }
+</script>

@@ -1,0 +1,179 @@
+<div id="navbar"><%- include("./partials/navbar") %></div>
+
+<script>
+  let name = document.getElementById("nav-name");
+  let cart = document.getElementById("cart");
+  let cartTotal = document.getElementById("crTotal");
+
+  `<%if(user && user.user){ %>`;
+
+  name.innerText = `<%= user.user.email%>`;
+  let userId = `<%=user.user._id%>`;
+  cart.firstElementChild.href = `http://localhost:4000/users/${userId}/cart`;
+  cartTotal.innerText = `<%= user.user.cart.length%>`;
+  `<%}%>`;
+</script>
+
+<%- include("./partials/header") %>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <ul id="searchList"></ul>
+  </div>
+</div>
+
+<!-- Topbar -->
+<div id="topbar"></div>
+
+<!-- Image carousel -->
+<div id="images"></div>
+
+<!-- special offers  -->
+<div id="offers" class="oDiv"></div>
+
+<!-- monthly essential  -->
+<div class="oDiv">
+  <p>Monthly Essentials</p>
+  <div id="mE"></div>
+</div>
+
+<!-- In Focus -->
+<div id="inFocus" class="oDiv"></div>
+
+<!-- snaks -->
+<div class="oDiv">
+  <p>Healthy Food and Household Needs</p>
+  <div id="snaks"></div>
+</div>
+
+<!-- random flex image 1 -->
+<div class="oDiv" id="random"></div>
+
+<!-- Winter -->
+<div class="oDiv" id="winter"></div>
+
+<!-- health-->
+<div class="oDiv" id="health"></div>
+
+<!-- random flex image 2 -->
+<div class="oDiv" id="random2">
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-curated-party.jpg"
+    alt=""
+  />
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-curated-stationery.jpg"
+    alt=""
+  />
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-curated-toys.jpg"
+    alt=""
+  />
+</div>
+
+<!-- random flex image 3 -->
+<div class="oDiv" id="random3"></div>
+
+<!-- home appliances -->
+<div class="oDiv" id="home"></div>
+
+<!-- random flex image 4 -->
+<div class="oDiv" id="random4"></div>
+
+<!-- Kitchen1 -->
+<div class="oDiv" id="kitchen">
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-cookware.jpg"
+    alt=""
+  />
+  <img
+    src="	https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-cookers.jpg"
+    alt=""
+  />
+</div>
+
+<!-- Kitchen 2-->
+<div class="oDiv" id="kitchen2">
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-3cw-kitchentools.jpg"
+    alt=""
+  />
+  <img
+    src="	https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-3cw-bottles.jpg"
+    alt=""
+  />
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-3cw-mixers.jpg"
+    alt=""
+  />
+</div>
+
+<!-- Kitchen 3-->
+<div class="oDiv" id="kitchen3">
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-breakfast2.jpg"
+    alt=""
+  />
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-biscuits2.jpg"
+    alt=""
+  />
+</div>
+
+<!-- product cards -->
+<div class="oDiv p_cards">
+  <p>This Week's Savers</p>
+  <div id="prod_cards"></div>
+</div>
+
+<!-- baby care -->
+<div class="oDiv" id="baby">
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-diapers.jpg"
+    alt=""
+  />
+  <img
+    src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-babycare.jpg"
+    alt=""
+  />
+</div>
+<!-- floor cleaning -->
+<div class="oDiv" id="floor"></div>
+
+<!-- refund ad -->
+<div class="oDiv" id="refundP">
+  <div>
+    <h2>Return And Refunds</h2>
+    <p>
+      Now shop Stress Free. Products purchased from our site can be returned for
+      a refund at any DMart Ready store within 7 days from the date of the
+      invoice provided
+    </p>
+    <button>Know More</button>
+  </div>
+  <div>
+    <img
+      src="	https://content.dmart.in/site/static/media/refunds-returns.580c0233.svg"
+      alt=""
+    />
+  </div>
+</div>
+
+<!-- pets utensials -->
+<div class="oDiv" id="pets"></div>
+
+<!-- footer -->
+<div id="footer"></div>
+<hr />
+<p id="cp">
+  Copyright © 2022 Avenue E-Commerce Limited (AEL). All Rights Reserved.
+</p>
+
+<script src="/js/home.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/navbar.js"></script>
+
+<%-include("./partials/footer") %>

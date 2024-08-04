@@ -1,0 +1,246 @@
+<link rel="stylesheet" href="/css/cate.css" />
+<div id="navbar"><%- include("./partials/navbar") %></div>
+<%- include("./partials/header") %>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <ul id="searchList"></ul>
+  </div>
+</div>
+<div id="topbar"></div>
+
+<div id="gnanendra">
+  <div>
+    <a href="/categories/grocery">
+      <img
+        src="https://img.dmart.in/images/rwd-mobile/categories/aesc-grocerycore.svg"
+        alt=""
+      />
+    </a>
+    <p id="sas">GROCERY</p>
+
+    <p><a class="Dalls" href="/categories/grocery?subCat=Dal">Dalls</a></p>
+    <p><a class="Dalls" href="/categories/grocery?subCat=Pulses">Pulses</a></p>
+    <p>
+      <a class="Dalls" href="/categories/grocery?subCat=Dry Fruits"
+        >Dry Fruits</a
+      >
+    </p>
+    <p>
+      <a class="Dalls" href="/categories/grocery?subCat=Cooking Oil"
+        >Cooking Oil</a
+      >
+    </p>
+    <p>
+      <a class="Dalls" href="/categories/grocery?subCat=Rice %26 Rice Products"
+        >Rice & Rice Products</a
+      >
+    </p>
+    <p>
+      <a class="Dalls" href="/categories/grocery?subCat=Masala"
+        >Masala & Spices</a
+      >
+    </p>
+    <p><a class="Dalls" href="/categories/grocery/">Salt/Sugar/Jaggert</a></p>
+    <a href="">
+      <img
+        src="https://img.dmart.in/images/rwd-mobile/categories/aesc-appliancescore.svg"
+        alt=""
+      />
+    </a>
+    <p id="sas">APPLIANCES</p>
+    <p><a class="Dalls" href="">Home Appliances</a></p>
+    <p><a class="Dalls" href="">Kitchen Appliances</a></p>
+    <p><a class="Dalls" href="">pesrsonal Care Appliances</a></p>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-specialscore.svg"
+      alt=""
+    />
+    <p id="sas">SPECIALS</p>
+    <p><a class="Dalls" href="">Face Mask</a></p>
+    <p><a class="Dalls" href="">Headphones & Speakers</a></p>
+    <p><a class="Dalls" href="">Monthly Essentials</a></p>
+    <p><a class="Dalls" href="">Household Needs</a></p>
+    <p><a class="Dalls" href="">Green Peas</a></p>
+    <p><a class="Dalls" href="">Luggage</a></p>
+    <p><a class="Dalls" href="">Yoga Mats</a></p>
+    <p><a class="Dalls" href="">Laptop & Mobile Stands</a></p>
+    <p><a class="Dalls" href="">Computer Accessories</a></p>
+    <p><a class="Dalls" href="">Motorbike Helmets</a></p>
+    <p><a class="Dalls" href="">Value Packs</a></p>
+    <p><a class="Dalls" href="">Festival Special</a></p>
+    <p><a class="Dalls" href="">Shopping Basket</a></p>
+  </div>
+  <div>
+    <a href="grocery.html">
+      <img
+        src="https://img.dmart.in/images/rwd-mobile/categories/aesc-dmartgrocerycore.svg"
+        alt=""
+      />
+    </a>
+    <p id="sas">DMART GROCERY</p>
+    <p><a class="Dalls" href="">Dals & Pulses</a></p>
+    <p><a class="Dalls" href=""> Salt/Sugar?Jaggery</a></p>
+    <p><a class="Dalls" href="">Rice & Rice Products</a></p>
+    <p><a class="Dalls" href="">Dry Fruits</a></p>
+    <p><a class="Dalls" href="">Masala & Spices</a></p>
+    <p><a class="Dalls" href="">Flour & Grains</a></p>
+    <p><a class="Dalls" href="">Cooking Oil & Ghee</a></p>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-babyandkidscore.svg"
+      alt=""
+    />
+    <p id="sas">BABY & KIDS</p>
+    <p><a class="Dalls" href="">Diapers & Wipes</a></p>
+    <p><a class="Dalls" href="">Baby Care</a></p>
+    <p><a class="Dalls" href="">Toys & Games</a></p>
+    <p><a class="Dalls" href="">Baby Food</a></p>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-footwearcore.svg"
+      alt=""
+    />
+    <p id="sas">FOOTWEAR</p>
+    <p><a class="Dalls" href="">Men's Footwear</a></p>
+    <p><a class="Dalls" href="">Women's Footwere</a></p>
+  </div>
+
+  <div>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-dairyandbeveragescore.svg"
+      alt=""
+    />
+    <p id="sas">DAIRY & BEVERAGES</p>
+    <p><a class="Dalls" href="">Beverages</a></p>
+    <p><a class="Dalls" href="">Dairy</a></p>
+    <a href="kitchen.html">
+      <img
+        src="https://img.dmart.in/images/rwd-mobile/categories/homkitchen15421.svg"
+        alt=""
+      />
+    </a>
+    <p id="sas">HOME & KITCHEN</p>
+    <p><a class="Dalls" href="">Detergent & Fabric Care</a></p>
+    <p><a class="Dalls" href="">Cleaners</a></p>
+    <p><a class="Dalls" href="">Utensil Cleaners</a></p>
+    <p><a class="Dalls" href="">Fresh & Repellents </a></p>
+    <p><a class="Dalls" href="">Furniture & Decor </a></p>
+    <p><a class="Dalls" href=""> Disinfectants</a></p>
+    <p><a class="Dalls" href="">Tissue Paper & Napkins </a></p>
+    <p><a class="Dalls" href="">Cleaning Tools</a></p>
+    <p><a class="Dalls" href="">kitchen Tools</a></p>
+    <p><a class="Dalls" href="">Bed & Bath</a></p>
+    <p><a class="Dalls" href="">Tableware</a></p>
+    <p><a class="Dalls" href="">Cookware & Serveware</a></p>
+    <p><a class="Dalls" href="">Jars & Containers</a></p>
+    <p><a class="Dalls" href="">Pooja Needs</a></p>
+    <p><a class="Dalls" href="">Home Utility</a></p>
+    <p><a class="Dalls" href="">Pet Supplies</a></p>
+    <p><a class="Dalls" href="">Shoe Care</a></p>
+  </div>
+  <div>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-packagedfoodcore.svg"
+      alt=""
+    />
+    <p id="sas">PACKAGED FOOD</p>
+    <p><a class="Dalls" href="">Biscuits & Cookies</a></p>
+    <p><a class="Dalls" href="">Snacks & Farsans</a></p>
+    <p><a class="Dalls" href="">Breakfast Cereals</a></p>
+    <p><a class="Dalls" href="">Chacolates</a></p>
+    <p><a class="Dalls" href="">ketchup & Sauce</a></p>
+    <p><a class="Dalls" href="">Jams & Spreads</a></p>
+    <p><a class="Dalls" href="">Pasta & Noodles</a></p>
+    <p><a class="Dalls" href="">Ready To Cook</a></p>
+    <p><a class="Dalls" href="">Gourmet Food</a></p>
+    <p><a class="Dalls" href="">Sweets</a></p>
+    <p><a class="Dalls" href="">Pickles</a></p>
+    <p><a class="Dalls" href="">Heath Food</a></p>
+    <p><a class="Dalls" href="">Soups</a></p>
+    <p><a class="Dalls" href="">Mukhwas</a></p>
+    <p><a class="Dalls" href="">Bakery</a></p>
+    <p><a class="Dalls" href="">Canned Food</a></p>
+    <p><a class="Dalls" href="">Frozen Food</a></p>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/935201.svg"
+      alt=""
+    />
+    <p id="sas">CLOTHING & ACCESSORIES</p>
+    <p><a class="Dalls" href="">Men's</a></p>
+    <p><a class="Dalls" href="">Women's</a></p>
+  </div>
+  <div>
+    <a href="/categories/fruits&veg">
+      <img
+        src="https://img.dmart.in/images/rwd-mobile/categories/aesc-fruitsandvegetablescore.svg"
+        alt=""
+      />
+    </a>
+    <p id="sas">FRUITS & VEGETABLES</p>
+    <p>
+      <a class="Dalls" href="/categories/fruits&veg?subCat=fresh%20fruits"
+        >Fresh Fruits</a
+      >
+    </p>
+    <p>
+      <a class="Dalls" href="/categories/fruits&veg?subCat=vegetables"
+        >Vegetables</a
+      >
+    </p>
+
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-personalcare211221.svg"
+      alt=""
+    />
+    <p id="sas">PERSONAL CARE</p>
+    <p><a class="Dalls" href="">Skin Care</a></p>
+    <p><a class="Dalls" href="">Face Care</a></p>
+    <p><a class="Dalls" href="">Hair Care</a></p>
+    <p><a class="Dalls" href="">Eye Care</a></p>
+    <p><a class="Dalls" href="">Lip Care</a></p>
+    <p><a class="Dalls" href="">Nail Care</a></p>
+    <p><a class="Dalls" href="">Oral Care</a></p>
+    <p><a class="Dalls" href="">Sanitary & Napkins</a></p>
+    <p><a class="Dalls" href="">Deos & Perfumes</a></p>
+    <p><a class="Dalls" href="">Shaving Needs</a></p>
+    <p><a class="Dalls" href="">Baby Care</a></p>
+    <p><a class="Dalls" href=""> Diapers & Wipes</a></p>
+    <p><a class="Dalls" href="">Health & Wellness</a></p>
+    <p><a class="Dalls" href="">Personal Hygeine</a></p>
+    <p><a class="Dalls" href="">Beauty Products</a></p>
+    <img
+      src="https://img.dmart.in/images/rwd-mobile/categories/aesc-schoolsuppliescore.svg"
+      alt=""
+    />
+    <p id="sas">SCHOOL SUPPLIES</p>
+    <p><a class="Dalls" href="">Notebooks</a></p>
+    <p><a class="Dalls" href="">Drawing Accessories</a></p>
+    <p><a class="Dalls" href="">Stationary Accessories</a></p>
+    <p><a class="Dalls" href="">School Needs</a></p>
+  </div>
+</div>
+<div id="footer"></div>
+<hr />
+<p id="cp">
+  Copyright © 2022 Avenue E-Commerce Limited (AEL). All Rights Reserved.
+</p>
+
+<%-include("./partials/footer") %>
+<script src="/js/search.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/navbar.js"></script>
+<script>
+  let tb = document.getElementById("topbar");
+  tb.innerHTML = topbar();
+  function topbar() {
+    return `
+         <a href="/categories" id=""><i class="fas fa-bars"></i>All categories</a>
+      <div><a href="/categories/grocery">Groceery</a></div>
+      <div><a href="/categories/fruits&veg">Fruits & Vegetables</a></div>
+      <div><a href="">Cookware & Serveware</a></div>
+      <div><a href="">Kitchen Appliances</a></div>
+    `;
+  }
+</script>

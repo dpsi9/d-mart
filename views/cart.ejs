@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="/css/cart.css" />
+<div id="navbar"><%- include("./partials/navbar") %></div>
+<script>
+  let name = document.getElementById("nav-name");
+
+  let cart = document.getElementById("cart");
+  let cartTotal = document.getElementById("crTotal");
+
+  `<% if (user) { %>`;
+  let userId = `<%=user._id%>`;
+  name.innerText = `<%= user.email%>`;
+  cartTotal.innerText = `<%= user.cart?.length%>`;
+  cart.firstElementChild.href = `http://localhost:4000/users/${userId}/cart`;
+  `<% }else if(user.user){ %>`;
+  name.innerText = `<%= user.user.email%>`;
+  let userId = `<%=user.user._id%>`;
+  cartTotal.innerText = `<%= user.user.cart?.length%>`;
+  cart.firstElementChild.href = `http://localhost:4000/users/${userId}/cart`;
+  `<%}%>`;
+</script>
+
+<%- include("./partials/header") %>
+
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <ul id="searchList"></ul>
+  </div>
+</div>
+
+<div class="cart_container">
+  <div class="cart_nav">
+    <div>
+      <p>
+        Your Shopping Cart Has
+        <b><label class="cart-items-count"><%=user.cart.length%></label></b>
+        Items
+      </p>
+    </div>
+  </div>
+  <!-- <p>GET YOUR ORDER DELIVERED TODAY</p> -->
+  <div class="cart">
+    <div class="cart_data_table">
+      <table>
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Product</td>
+            <td>Name</td>
+            <td>You Pay</td>
+            <td>You Save</td>
+            <td>Remove</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% user?.cart?.forEach((element,index) => { %>
+          <tr>
+            <td><%= index+1%></td>
+            <td id="td2">
+              <img src="<%=element.imgUrl%>" />
+            </td>
+            <td><%= element.name?.substring(0,40)%>...</td>
+            <td><%=element.price%></td>
+            <td><%=element.strikedOffPrice - element.price%></td>
+            <td>
+              <form
+                action="/users/<%=user._id%>/<%=element._id%>/cart?_method=DELETE"
+                method="POST"
+              >
+                <button class="btn">remove</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="checkout">
+      <div class="total_amount">
+        <p>
+          Price Summary of
+          <b><label id="cart-items-c"><%=user.cart.length%></label> </b>Items
+        </p>
+        <hr />
+        <div>
+          <div>Cart Total</div>
+          <div>
+            <p>Rs.<label id="sub-total"></label></p>
+          </div>
+        </div>
+        <hr class="hr" />
+        <div>
+          <div>Delivery Charge</div>
+          <div>Rs.50</div>
+        </div>
+        <hr class="hr" />
+        <div>
+          <div>Total Amount</div>
+          <p>Rs.<label id="total"></label></p>
+        </div>
+        <hr class="hr" />
+
+        <div class="cart_nav_bottom">
+          <button id="checkout-btn-bottom">
+            <a href="/payment"> PROCEED TO CHECKOUT </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%-include("./partials/footer") %>
+
+<script>
+  let subTotal = document.getElementById("sub-total");
+  let finalTotal = document.getElementById("total");
+
+  `<% let total = 0 %> <% user.cart.forEach(element => { %> <% total +=
+    element.price %> <% }) %>`;
+  subTotal.innerText = `<%=total %>`;
+
+  finalTotal.innerText = `<%=total + 50 %>`;
+
+  let cBtn = document.getElementById("checkout-btn-bottom");
+
+  console.log(total.innerText);
+  localStorage.setItem("finalTotal", total.innerText);
+  if (finalTotal.innerText <= 50) {
+    cBtn.disabled = true;
+    cBtn.style.backgroundColor = "red";
+    console.log("disabled", cBtn);
+  }
+</script>
+
+<script src="/js/search.js"></script>
+<script src="/js/navbar.js"></script>

@@ -1,0 +1,72 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+  rel="stylesheet"
+/>
+<link rel="icon" type="image/png" href="/images/icon.png" />
+<link rel="stylesheet" href="/css/checkout.css" />
+<link rel="stylesheet" href="/css/payment.css" />
+<div id="check-nav"></div>
+<div id="pay-mode">
+  <div id="price-display">
+    <h3>Select Payment Mode</h3>
+    <h3 id="p-dis"></h3>
+  </div>
+
+  <div id="main-payment">
+    <div id="pay-choice">
+      <div id="debit" onclick="debit()">
+        <div>
+          <div>
+            <i class="fas fa-credit-card fa-lg"></i>
+          </div>
+          <div>Debit Card</div>
+        </div>
+        <div><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div id="credit" onclick="credit()">
+        <div>
+          <div>
+            <i class="fas fa-credit-card fa-lg"></i>
+          </div>
+          <div>Credit Card</div>
+        </div>
+        <div><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div id="upi-div" onclick="upi()">
+        <div>
+          <div>
+            <img src="images/upi.png" alt="" id="upi" />
+          </div>
+          <div>UPI/BHIM</div>
+        </div>
+        <div><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div id="cash" onclick="cash()">
+        <div>
+          <div>
+            <i class="fas fa-money-bill-wave fa-lg"></i>
+          </div>
+          <div>Cash/Card On Delivery</div>
+        </div>
+        <div><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div id="pay-now"></div>
+  </div>
+</div>
+<script type="module">
+  // let check_nav = document.getElementById("check-nav");
+  // check_nav.innerHTML = navbar();
+  // document.getElementById("nav-name").innerText =
+  //   localStorage.getItem("mylocal_2");
+</script>
+<script src="/js/payment.js"></script>
+<script>
+  let final_amount = localStorage.getItem("finalTotal");
+  document.querySelector("#p-dis").textContent = `Total Price: ${final_amount}`;
+</script>
